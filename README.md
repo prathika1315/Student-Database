@@ -1,39 +1,91 @@
-# Student Management System
+# 🎓 Student Management System
 
-A Java console application to manage student records with full CRUD functionality,
-efficient search using Collections, persistent file storage, and an HTML/CSS report export.
+A **Java console-based Student Management System** that efficiently manages student records using **Object-Oriented Programming (OOP)**, **Java Collections**, **File Handling**, and **HTML/CSS report generation**.
 
-## How this matches your resume bullets
+This project demonstrates CRUD operations, fast student search using `HashMap`, persistent data storage using CSV files, and automatic HTML report generation.
 
-| Resume claim | Where it's implemented |
-|---|---|
-| Full CRUD functionality | `StudentManager.java` — add, view, search, update, delete |
-| Java Collections for search/retrieval | `ArrayList<Student>` for ordered storage + `HashMap<Integer, Student>` for O(1) lookup by ID (instead of looping the whole list) |
-| File handling for persistent storage | `FileHandler.java` — reads/writes `students.txt` (CSV format) so data survives between runs |
-| Modular, maintainable code | Separate classes for model (`Student`), storage (`FileHandler`), logic (`StudentManager`), UI (`Main`), and reporting (`HtmlReportGenerator`) |
-| Java, HTML, CSS, OOP, File Handling | `HtmlReportGenerator.java` exports records into a styled `students_report.html` + `style.css` |
+---
 
-## Project structure
+## Live Demo
+ **Live Website:** https://prathika1315.github.io/Student-Database/
+
+---
+
+## 📌 Project Overview
+
+The Student Management System allows users to:
+
+- ➕ Add new student records
+- 📋 View all students
+- 🔍 Search students by ID
+- ✏️ Update student details
+- ❌ Delete student records
+- 💾 Store data permanently using file handling
+- 🌐 Generate a professional HTML report
+
+---
+
+## ✨ Features
+
+- ✅ Full CRUD Operations
+- ✅ Fast Search using HashMap
+- ✅ ArrayList for maintaining student records
+- ✅ Persistent Storage using CSV File Handling
+- ✅ HTML & CSS Report Generation
+- ✅ Menu-driven Console Interface
+- ✅ Modular Code Structure
+- ✅ Object-Oriented Programming Principles
+
+---
+
+## 🛠 Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Java | Core Programming |
+| OOP | Modular Design |
+| ArrayList | Store Student Records |
+| HashMap | Fast Student Lookup |
+| File Handling | Persistent Storage |
+| HTML | Report Generation |
+| CSS | Report Styling |
+| VS Code | Development Environment |
+
+---
+
+## 📂 Project Structure
 
 ```
 StudentManagementSystem/
-└── src/
-    ├── Student.java              (model class)
-    ├── FileHandler.java           (file persistence)
-    ├── StudentManager.java        (CRUD logic + Collections)
-    ├── HtmlReportGenerator.java   (HTML/CSS report export)
-    └── Main.java                  (console menu / entry point)
+│
+├── src/
+│   ├── Student.java
+│   ├── StudentManager.java
+│   ├── FileHandler.java
+│   ├── HtmlReportGenerator.java
+│   └── Main.java
+│
+├── students.txt
+├── students_report.html
+├── style.css
+└── README.md
 ```
 
-## How to run it in VS Code
+---
 
-1. Install the **Extension Pack for Java** in VS Code (if you haven't already).
-2. Open the `StudentManagementSystem` folder in VS Code.
-3. Open `src/Main.java`.
-4. Click the **Run** button above `public static void main`, or press `Ctrl+F5`.
-5. Use the numbered menu in the integrated terminal.
+## 🚀 How to Run the Project
 
-## How to run it from the command line
+### Using VS Code
+
+1. Install **Extension Pack for Java**
+2. Open the project folder in VS Code.
+3. Open `Main.java`
+4. Click **Run** or press **Ctrl + F5**
+5. Use the console menu to perform operations.
+
+---
+
+### Using Command Prompt
 
 ```bash
 cd StudentManagementSystem/src
@@ -41,33 +93,103 @@ javac *.java
 java Main
 ```
 
-## What happens when you run it
+---
 
-- Choosing **6. Generate HTML Report** creates `students_report.html` and `style.css`
-  in the same folder. Open `students_report.html` with VS Code's **Live Server**
-  extension (right-click the file → "Open with Live Server") to view a styled table
-  of all your student records in the browser.
-- All add/update/delete operations are immediately saved to `students.txt`, so your
-  data is still there the next time you run the program.
+## 📊 Sample Workflow
 
-## Sample data to demo it quickly
+1. Add Student
+2. View All Students
+3. Search Student by ID
+4. Update Student Details
+5. Delete Student
+6. Generate HTML Report
 
-When the menu appears, try:
-1. **Add Student** → ID `101`, Name `Riya Sharma`, Age `20`, Dept `CSE`, Email, Phone, Marks `88.5`
-2. **Add Student** → ID `102`, Name `Arjun Kumar`, Age `21`, Dept `ECE`, Email, Phone, Marks `79`
-3. **View All Students** → see both listed
-4. **Search Student** → by ID `101`
-5. **Update Student** → change marks for `101`
-6. **Generate HTML Report** → open `students_report.html`
-7. **Delete Student** → remove `102`
+---
 
-## Talking points for interviews
+## 📁 Generated Files
 
-- Why HashMap alongside ArrayList? ArrayList keeps natural insertion order for
-  listing/reporting; HashMap gives constant-time lookup by ID instead of an O(n)
-  scan — this is literally the "improving search and retrieval operations" line.
-- Why CSV instead of serialization? Human-readable, easy to inspect/debug, and
-  demonstrates real file I/O (BufferedReader/BufferedWriter) rather than a black-box
-  binary format.
-- Why generate HTML/CSS from Java? Shows the app isn't just a terminal tool — it can
-  produce a real front-end artifact, and ties together your full listed tech stack.
+After running the project:
+
+- `students.txt` → Stores all student records permanently.
+- `students_report.html` → Displays student records in a browser.
+- `style.css` → Styles the generated HTML report.
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots inside an **images/** folder and update the paths below.
+
+### Main Menu
+
+```markdown
+![Main Menu](images/menu.png)
+```
+
+### Student List
+
+```markdown
+![Student List](images/student-list.png)
+```
+
+### HTML Report
+
+```markdown
+![HTML Report](images/report.png)
+```
+
+---
+
+## 💡 Project Highlights
+
+- Developed using Java Object-Oriented Programming.
+- Improved search performance using HashMap.
+- Implemented persistent storage with BufferedReader and BufferedWriter.
+- Exported student data as a styled HTML report.
+- Designed with modular architecture for maintainability.
+
+---
+
+## 🎯 Resume Highlights
+
+✔ Developed a Java-based Student Management System with full CRUD functionality.
+
+✔ Optimized student search and retrieval using Java Collections (`HashMap` & `ArrayList`).
+
+✔ Implemented persistent data storage using Java File Handling.
+
+✔ Generated HTML/CSS reports for better visualization.
+
+✔ Followed Object-Oriented Programming principles to build a modular application.
+
+---
+
+## 🚀 Future Enhancements
+
+- JDBC Integration
+- MySQL Database Support
+- User Login Authentication
+- Java Swing GUI
+- Spring Boot REST API
+- Export Reports to PDF
+- Student Attendance Module
+- Dashboard & Analytics
+
+---
+
+## 👩‍💻 Author
+
+**Prathika V**
+
+Final Year – B.E. Electronics and Communication Engineering
+
+Aspiring Java Full Stack Developer
+
+GitHub: https://github.com/prathika1315
+
+
+---
+
+## ⭐ If you found this project useful
+
+Please consider giving this repository a **⭐ Star**.
